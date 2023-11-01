@@ -1,0 +1,64 @@
+{
+  "builder_name": "allocine",
+  "citation": "@misc{blard2019allocine,\n  author = {Blard, Theophile},\n  title = {french-sentiment-analysis-with-bert},\n  year = {2020},\n  publisher = {GitHub},\n  journal = {GitHub repository},\n  howpublished={\\url{https://github.com/TheophileBlard/french-sentiment-analysis-with-bert}},\n}\n",
+  "config_name": "allocine",
+  "dataset_name": "allocine",
+  "dataset_size": 114424563,
+  "description": " Allocine Dataset: A Large-Scale French Movie Reviews Dataset.\n This is a dataset for binary sentiment classification, made of user reviews scraped from Allocine.fr.\n It contains 100k positive and 100k negative reviews divided into 3 balanced splits: train (160k reviews), val (20k) and test (20k).\n",
+  "download_checksums": {
+    "https://github.com/TheophileBlard/french-sentiment-analysis-with-bert/raw/master/allocine_dataset/data.tar.bz2": {
+      "num_bytes": 66625305,
+      "checksum": null
+    }
+  },
+  "download_size": 66625305,
+  "features": {
+    "review": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "label": {
+      "names": [
+        "neg",
+        "pos"
+      ],
+      "_type": "ClassLabel"
+    }
+  },
+  "homepage": "https://github.com/TheophileBlard/french-sentiment-analysis-with-bert",
+  "license": "",
+  "size_in_bytes": 181049868,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 91330632,
+      "num_examples": 160000,
+      "dataset_name": "allocine"
+    },
+    "validation": {
+      "name": "validation",
+      "num_bytes": 11546242,
+      "num_examples": 20000,
+      "dataset_name": "allocine"
+    },
+    "test": {
+      "name": "test",
+      "num_bytes": 11547689,
+      "num_examples": 20000,
+      "dataset_name": "allocine"
+    }
+  },
+  "task_templates": [
+    {
+      "task": "text-classification",
+      "text_column": "review",
+      "label_column": "label"
+    }
+  ],
+  "version": {
+    "version_str": "1.0.0",
+    "major": 1,
+    "minor": 0,
+    "patch": 0
+  }
+}
